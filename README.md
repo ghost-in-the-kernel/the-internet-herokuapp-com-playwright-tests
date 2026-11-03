@@ -20,7 +20,7 @@ mvn test                               all tests, headless
 mvn test -Dgroups=navigation           header, footer and page links land on the right pages
 mvn test -Dgroups=menus                links inside dropdown menus
 mvn test -Dgroups=links                every address the crawl requested, asked again: target/link-report.md
-                                       (fails on one broken since the crawl; 9 broken then, listed)
+                                       (fails on one broken since the crawl; 7 broken then, listed)
                                        and the 7 links to other sites: target/external-link-report.md
 mvn test -Dheaded=true                 watch it in a browser (half a second per action; -DslowMo=1000)
 mvn test -Dbrowser=firefox             in Firefox, or -Dbrowser=webkit (Safari's engine); Chromium by default
@@ -203,7 +203,7 @@ Left as they are, a rebuild brings the newer crawl's versions; changed, yours ar
 
 ## Write a test
 
-The worked example in this suite is `src/test/java/com/herokuapp/theinternet/tests/cases/TwoFactorFormTest.java`, a test of TwoFactorPage, chosen because its form has the fewest fields of any page's. Open it beside `src/main/java/com/herokuapp/theinternet/tests/pages/twofactor/`: it opens TwoFactorPage, checks the browser will not send its form empty, fills it through `execute().fillLogInWithTomsmithAndSuperSecretPa1iaczzvForm(...)` with test data you can change, and checks each field holds what was typed. Nothing is sent: what happens after Send is the one thing left, and its YOURS block shows the lines to add.
+The worked example in this suite is `src/test/java/com/herokuapp/theinternet/tests/cases/TwoFactorFormTest.java`, a test of TwoFactorPage, chosen because its form has the fewest fields of any page's. Open it beside `src/main/java/com/herokuapp/theinternet/tests/pages/twofactor/`: it opens TwoFactorPage, checks the browser will not send its form empty, fills it through `execute().fillThenEnterThForm(...)` with test data you can change, and checks each field holds what was typed. Nothing is sent: what happens after Send is the one thing left, and its YOURS block shows the lines to add.
 
 A test of your own is a class in `cases/` that extends `BaseTest`, with JUnit's assertions if you
 like. The suite's rules hold it to one thing: it checks something (SUITE-RULES.md).

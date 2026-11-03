@@ -18,7 +18,7 @@ import com.microsoft.playwright.Page;
 public enum IframeElements implements PageElement {
     // Section headings the crawled pages of this type share. One a test does not use is harmless.
     /** Heading "An iFrame containing the TinyMCE WYSIWYG Editor": every crawled page of this type showed it. */
-    AN_I_FRAME_CONTAINING_THE_TINY_M_1S3A4GM_HEADING(
+    AN_I_FRAME_CONTAINING_THE_TINY_MCE_HEADING(
             page -> Headings.named(page, "An iFrame containing the TinyMCE WYSIWYG Editor")),
 
     // In the page (from the crawl: nothing was typed, clicked or sent).

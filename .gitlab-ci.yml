@@ -7,7 +7,7 @@
 # Playwright's own image, of the version this suite uses: Java, Maven and its browsers, ready.
 default:
   image:
-    name: mcr.microsoft.com/playwright/java:v1.56.0-noble
+    name: mcr.microsoft.com/playwright/java:v1.56.0-noble@sha256:b9afb069d9d99c7d06a5b8ef5160493ee461996d12407184738ebca2e4aef699
     entrypoint: ['']
 quick:
   # Judge the commit: a tree with changes fails SR-23 here, where a plain test run only warns.
@@ -59,7 +59,7 @@ full:
 stories-claim:
   rules:
     - if: $SUITE_JOB == "stories"
-  image: node:20
+  image: node:22
   environment:
     name: jira
     action: access
@@ -77,7 +77,7 @@ stories-crew:
   rules:
     - if: $SUITE_JOB == "stories"
   needs: [stories-claim]
-  image: node:20
+  image: node:22
   environment:
     name: crew
     action: access
@@ -96,7 +96,7 @@ stories-publish:
     - if: $SUITE_JOB == "stories"
       when: always
   needs: [stories-claim, stories-crew]
-  image: node:20
+  image: node:22
   timeout: 1h
   environment:
     name: jira

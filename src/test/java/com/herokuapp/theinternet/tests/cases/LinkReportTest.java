@@ -34,7 +34,8 @@ class LinkReportTest extends BaseTest implements BaseTest.WithoutBrowser {
     @DisplayName("Every address the crawl requested answers as it did (target/link-report.md)")
     void linksAnswerAsInTheCrawl() {
         List<String> broken = LinkReport.check(path -> http.get(SiteConfig.url(path)).status());
-        assertTrue(broken.isEmpty(), "Broken since the crawl (target/link-report.md): " + String.join("; ", broken));
+        assertTrue(broken.isEmpty(), "Broken since the crawl, or not as the team expected (target/link-report.md): "
+                + String.join("; ", broken));
     }
 
     @Test

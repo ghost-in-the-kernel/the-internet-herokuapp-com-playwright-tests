@@ -74,7 +74,7 @@ public enum HomeElements implements PageElement {
     NESTED_FRAMES_LINK(page -> page.locator("xpath=//a[@href='/nested_frames'] >> visible=true").first(),
             "\"Nested Frames\""),
     /** Link "Forgot Password" (href /forgot_password) to ForgotPasswordPage, seen by the crawl on /. */
-    FORGOT_PASSWORD_LINK(page -> page.locator("xpath=//a[@href='/forgot_password'] >> visible=true").first(),
+    ELEMENT_LINK(page -> page.locator("xpath=//a[@href='/forgot_password'] >> visible=true").first(),
             "\"Forgot Password\""),
     /** Link "Subdirectories" (href /subdirectories) to SubdirectoriesPage, seen by the crawl on /. */
     SUBDIRECTORIES_LINK(page -> page.locator("xpath=//a[@href='/subdirectories'] >> visible=true").first(),
