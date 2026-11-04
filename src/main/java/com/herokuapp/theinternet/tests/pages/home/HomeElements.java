@@ -74,7 +74,7 @@ public enum HomeElements implements PageElement {
     NESTED_FRAMES_LINK(page -> page.locator("xpath=//a[@href='/nested_frames'] >> visible=true").first(),
             "\"Nested Frames\""),
     /** Link "Forgot Password" (href /forgot_password) to ForgotPasswordPage, seen by the crawl on /. */
-    ELEMENT_LINK(page -> page.locator("xpath=//a[@href='/forgot_password'] >> visible=true").first(),
+    FORGOT_PASSWORD_LINK(page -> page.locator("xpath=//a[@href='/forgot_password'] >> visible=true").first(),
             "\"Forgot Password\""),
     /** Link "Subdirectories" (href /subdirectories) to SubdirectoriesPage, seen by the crawl on /. */
     SUBDIRECTORIES_LINK(page -> page.locator("xpath=//a[@href='/subdirectories'] >> visible=true").first(),
@@ -117,8 +117,8 @@ public enum HomeElements implements PageElement {
             .first(), "\"Disappearing Elements\""),
     /** Link "Sortable Data Tables" (href /tables) to TablesPage, seen by the crawl on /. */
     TABLES_LINK(page -> page.locator("xpath=//a[@href='/tables'] >> visible=true").first(), "\"Sortable Data Tables\""),
-    /** Link "Infinite Scroll" (href /infinite_scroll) to InfiniteScrollListPage, seen by the crawl on /. */
-    INFINITE_SCROLL_LIST_LINK(page -> page.locator("xpath=//a[@href='/infinite_scroll'] >> visible=true").first(),
+    /** Link "Infinite Scroll" (href /infinite_scroll) to InfiniteScrollPage, seen by the crawl on /. */
+    INFINITE_SCROLL_LINK(page -> page.locator("xpath=//a[@href='/infinite_scroll'] >> visible=true").first(),
             "\"Infinite Scroll\""),
     /** Link "Checkboxes" (href /checkboxes) to CheckboxesPage, seen by the crawl on /. */
     CHECKBOXES_LINK(page -> page.locator("xpath=//a[@href='/checkboxes'] >> visible=true").first(), "\"Checkboxes\""),
