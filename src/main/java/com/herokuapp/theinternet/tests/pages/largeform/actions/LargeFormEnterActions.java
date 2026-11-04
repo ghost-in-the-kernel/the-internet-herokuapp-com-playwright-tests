@@ -133,14 +133,14 @@ public class LargeFormEnterActions {
     }
 
     /** Types into the range field "Years of experience: 5". */
-    public LargeFormEnterActions yearsOfExperience5(String text) {
-        UserActions.type(page, LargeFormElements.YEARS_OF_EXPERIENCE_5_INPUT, text);
+    public LargeFormEnterActions yearsOfExperience(String text) {
+        UserActions.type(page, LargeFormElements.YEARS_OF_EXPERIENCE_INPUT, text);
         return this;
     }
 
     /** Empties the range field "Years of experience: 5". */
-    public LargeFormEnterActions clearYearsOfExperience5() {
-        UserActions.clear(page, LargeFormElements.YEARS_OF_EXPERIENCE_5_INPUT);
+    public LargeFormEnterActions clearYearsOfExperience() {
+        UserActions.clear(page, LargeFormElements.YEARS_OF_EXPERIENCE_INPUT);
         return this;
     }
 
